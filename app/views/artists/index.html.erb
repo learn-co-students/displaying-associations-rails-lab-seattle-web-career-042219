@@ -1,0 +1,14 @@
+<ul>
+
+
+  <%@artists.each do |artist| %>
+  <%=artist.name%>
+  <%artist.songs.each do |song|%>
+    <p>Song Title:<%=song.title %></p>
+    <p>Link:<%= link_to song.title, song_path(song)%></p>
+    <%end%>
+    <p><%=artist.song_count%> songs</p>
+    <br>
+    <br>
+<%end%>
+</ul>
